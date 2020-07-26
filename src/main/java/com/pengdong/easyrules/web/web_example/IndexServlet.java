@@ -16,6 +16,8 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain");
         PrintWriter out = response.getWriter();
+
+        System.out.println("ok");
         if (isSuspicious(request)) {
             out.print("Access denied");
         } else {
